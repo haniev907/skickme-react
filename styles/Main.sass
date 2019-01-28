@@ -1,0 +1,59 @@
+@mixin font ($weight: 400, $size: 1.4rem)
+  font: $weight $size "Open Sans", Arial, Tahoma, sans-serif
+
+*
+  box-sizing: border-box!important
+
+body, html
+  -webkit-tap-highlight-color: transparent
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+
+html
+  font-size: 62.5%
+  height: 100%
+
+body, .container, #root
+  height: inherit
+
+body
+  background: #f9f9f9
+  @include font()
+
+.font
+  @include font()
+
+.container
+  min-width: 320px
+  max-width: 1024px
+  width: 100%
+  margin: auto
+
+.row
+  background: #ffffff
+  padding: 1.2rem 1.5rem
+  border-radius: 2px
+
+.inline-flex
+  display: inline-flex
+
+.hide
+  display: none
+
+.flex
+  display: flex!important
+
+button:not(.other-button)
+  border-radius: 2px
+  border: none
+  outline: none
+  text-decoration: none
+  padding: 1.4rem 2.5rem
+  cursor: pointer
+  background: #d88acc
+  color: #ffffff
+  @include font(600, 1.3rem)
+  text-transform: uppercase
+
+button
+  margin-top: .5rem

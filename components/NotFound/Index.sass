@@ -1,0 +1,33 @@
+.not-found-link
+  text-decoration: none
+
+.not-found-page
+  background: #d88acc
+  height: 100%
+  color: white
+
+  .container
+    flex-direction: column
+    
+    .logo, .text
+      margin-left: auto
+      margin-right: auto
+
+    .logo 
+      margin-top: auto
+      margin-bottom: 1rem
+      width: 3.5rem
+      height: 5rem
+      background: url(~images/logo-2.svg) 50% 50% / cover
+
+    .text
+      margin-bottom: auto
+      margin-top: 1rem
+      font-size: 20rem
+      font-weight: 600
+      color: white
+      text-decoration: none
+
+@media only screen and (max-width: 500px)
+  .not-found-page .container .text
+    font-size: 15rem

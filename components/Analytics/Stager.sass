@@ -1,0 +1,32 @@
+.analytics-stager-wrapper
+  justify-content: center
+  margin: 1rem 0 2rem 0
+
+  div
+    padding: .6rem 1.5rem
+    font-size: 1.3rem
+    background: #f9f9f9
+    color: #939393
+    cursor: pointer
+    min-width: 12rem
+    text-align: center
+    transition: all 200ms
+  
+    &.active
+      color: white
+      background: #d88acc
+
+  div:not(:last-child)
+    border-right: 2px solid white
+
+  div:first-child
+    border-top-left-radius: 2px
+    border-bottom-left-radius: 2px
+
+  div:last-child
+    border-top-right-radius: 2px
+    border-bottom-right-radius: 2px
+
+@media only screen and (max-width: 410px)
+  .analytics-stager-wrapper
+    margin: 0 0 1rem 0!important

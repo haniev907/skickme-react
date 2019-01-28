@@ -1,0 +1,57 @@
+@mixin font ($weight: 400, $size: 1.4rem)
+  font: $weight $size "Open Sans", Arial, Tahoma, sans-serif
+  
+label.input-wrapper
+  display: flex
+  position: relative
+  flex-direction: column
+
+  span
+    color: #939393
+    text-transform: uppercase
+    @include font(600, 1.1rem)
+    font-size: 1.1rem
+    font-weight: 600
+    letter-spacing: .5px
+
+  textarea
+    resize: vertical
+
+  input
+    /** IOS Bug fix **/
+    flex-shrink: 100
+    padding-left: 0
+    padding-right: 0
+
+  input, textarea
+    border: none
+    width: 100%
+    min-height: 3.2rem
+    outline: none
+    @include font()
+    border-bottom: 2px solid #e8e8e8
+    margin: 0
+    /** IOS Bug fix **/
+    border-radius: 0!important
+
+    &:focus
+      border-bottom-color: #d88acc
+
+  textarea
+    min-height: 7rem
+
+  .prepofix
+    min-height: 3.2rem
+    color: black
+    text-transform: lowercase
+    border-bottom: 2px solid #e8e8e8
+    padding: .6rem 0
+    @include font()
+
+  .restore-link
+    position: absolute
+    right: .5rem
+    top: .5rem
+    color: #939393
+    text-decoration: none
+    @include font(600, 2.5rem)

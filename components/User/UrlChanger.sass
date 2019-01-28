@@ -1,0 +1,32 @@
+.url-changer-wrapper
+  width: 100%
+  -moz-user-select: none
+  -khtml-user-select: none
+  -webkit-user-select: none
+  -ms-user-select: none
+  user-select: none
+
+  .url-changer
+    margin: auto
+    background: white
+    border-radius: 33px
+    overflow: hidden
+    border: .2rem solid white
+
+    div
+      padding: .2rem 1.5rem
+      font-weight: 600
+      font-size: 1.3rem
+      color: #d88acc
+      border-radius: 33px
+      overflow: hidden
+      transition: all 200ms
+
+      &.active
+        color: white
+        background: #d88acc
+
+@media only screen and (max-width: 500px)
+  .url-changer-wrapper .url-changer div
+    font-size: 1.2rem
+    padding: .2rem 1.2rem

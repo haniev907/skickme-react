@@ -1,0 +1,47 @@
+.selectable-confirm-wrapper
+  position: fixed
+  z-index: 2
+  top: -10rem
+  left: 0
+  background: white
+  width: 100%
+  box-shadow: .2rem 0 .5rem rgba(0,0,0, .1)
+  justify-content: center
+  transition: all 200ms
+
+  &.on
+    top: 0
+
+  .selectable-confirm
+    width: 100%
+    max-width: 70rem
+    justify-content: space-between
+    align-items: center
+
+    .count
+      color: #d88acc
+      font-size: 2rem
+    
+    .cancel, .apply
+      padding: 1.5rem
+      cursor: pointer
+
+      &::after
+        display: block
+        content: ""
+
+    .cancel
+      margin-left: 1.5rem
+
+    .apply
+      margin-right: 1.5rem
+
+    .cancel::after
+      width: 1.7rem
+      height: 1.7rem
+      background: url(~images/cancel-2.svg) 50% 50% / cover
+
+    .apply::after
+      width: 2rem
+      height: 2rem
+      background: url(~images/select.svg) 50% 50% / cover

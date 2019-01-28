@@ -1,0 +1,35 @@
+.text-chart-wrapper
+  padding: 0 1rem
+
+  .item
+    margin: 0 auto
+    
+    &.visits
+      color: #d88acc
+
+    &.clicks
+      color: #56c167 
+
+    .text
+      font-size: 1.7rem
+      font-weight: 300
+      margin: auto 1rem auto auto
+    
+    .graph
+      flex-direction: column
+      justify-content: center
+      font-size: 1.3rem
+      color: #939393
+
+      div
+        line-height: 1.7rem
+
+@media only screen and (max-width: 640px)
+  .text-chart-wrapper
+    flex-direction: column
+
+    .item
+      margin: auto
+
+      .text
+        font-size: 1.6rem

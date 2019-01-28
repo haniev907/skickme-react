@@ -1,0 +1,60 @@
+.selectable-link-wrapper
+  overflow: hidden
+  width: 25%
+  padding: .3rem
+  cursor: pointer
+
+  .link
+    position: relative
+    padding-top: 100%
+    border-radius: 2px
+
+    &::after, &::before
+      content: ""
+      position: absolute
+      transition: all 200ms
+      opacity: 0
+
+    &.selected::after, &.selected::before
+      opacity: 1
+    
+    &::after
+      left: 0
+      right: 0
+      top: 0
+      bottom: 0
+      background: rgba(255, 255, 255, .8)
+    
+    &::before
+      content: ""
+      position: absolute
+      width: 2rem
+      height: 2rem
+      top: .5rem
+      right: .7rem
+      background: url(~images/select.svg) 50% 50% / cover
+      z-index: 1
+
+    .text
+      position: absolute
+      text-align: center
+      bottom: .7rem
+      color: white
+      width: 100%
+      font-weight: 600
+      font-size: 1.2rem
+
+    .icon
+      width: 2.5rem
+      height: 2.5rem
+      position: absolute
+      left: 50%
+      top: 50%
+      margin-left: -1.25rem
+      margin-top: -1.25rem
+      background-size: cover
+      background-position: 50% 50%
+
+@media only screen and (max-width: 550px)
+  .selectable-link-wrapper
+    width: 50%
