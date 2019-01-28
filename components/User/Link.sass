@@ -1,0 +1,92 @@
+.text-template
+  text-overflow: ellipsis
+  white-space: nowrap
+  overflow: hidden
+  color: white
+  text-align: center
+
+.remove-template
+  position: absolute
+  top: .2rem
+  right: 0
+  padding: .9rem 1rem
+  z-index: 1
+
+  .icon
+    width: 1.8rem
+    height: 1.8rem
+    background: url(~images/delete.svg) 50% 50% / cover
+
+.link-wrapper
+  padding: .2rem
+      
+  &.other
+    width: 25%
+    cursor: pointer
+    position: relative
+
+    .url-changer-wrapper
+      position: absolute
+      bottom: .7rem
+
+    .remove
+      @extend .remove-template
+
+    .link
+      position: relative
+      padding-top: 100%
+      width: 100%
+      border-radius: 2px
+
+      .text
+        position: absolute
+        width: 100%
+        bottom: .7rem
+        padding: 0 1rem
+        @extend .text-template
+
+      .icon
+        position: absolute
+        width: 3rem
+        height: 3rem
+        left: 50%
+        top: 50%
+        margin-top: -1.5rem
+        margin-left: -1.5rem
+        background-size: cover
+        background-position: 50% 50%
+
+  &.button
+    padding: 1rem 2rem
+    background: #d88acc
+    border-radius: 2px
+    cursor: pointer
+    min-width: 18rem
+    max-width: 22rem
+    position: relative
+    margin-left: .2rem
+    margin-right: .2rem
+
+    .remove
+      @extend .remove-template
+
+    .text
+      @extend .text-template
+
+@media only screen and (max-width: 768px)
+  .link-wrapper.other
+    width: 33.3%
+
+@media only screen and (max-width: 500px)
+  .link-wrapper.other
+    width: 50%
+  
+    .link 
+      .text
+        font-size: 1.3rem
+
+      .icon
+        width: 2.5rem
+        height: 2.5rem
+        margin-left: -1.25rem
+        margin-top: -1.25rem

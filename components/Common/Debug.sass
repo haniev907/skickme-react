@@ -1,0 +1,44 @@
+%styles
+  display: block
+  animation-name: rotateInUpLeft
+
+.react-debug
+  position: fixed
+  top: 1rem
+  left: 1rem
+  z-index: 9999
+  max-width: 400px
+  padding: 1rem 2rem
+  border-radius: 2px
+  animation-duration: 150ms
+  animation-fill-mode: both
+  display: none
+  overflow: hidden
+
+  &.error
+    background: #faaaae
+    color: #a24b49
+    @extend %styles
+
+  &.info
+    background: #a0e695
+    color: #50ab71
+    @extend %styles
+
+@keyframes rotateInUpLeft
+  from
+    transform-origin: left bottom
+    transform: rotate3d(0, 0, 1, 45deg)
+    opacity: 0
+
+  to
+    transform-origin: left bottom
+    transform: none
+    opacity: 1
+  
+@media only screen and (max-width: 400px)
+  .react-debug
+    width: 100%
+    border-radius: 0
+    top: 0
+    left: 0

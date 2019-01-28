@@ -1,0 +1,66 @@
+$border-color: #e8e8e8
+$body-color: #f9f9f9
+$font-size: 1.3rem
+
+.line-chart-wrapper
+  height: 30rem
+  -webkit-user-select: none
+
+  .not-data
+    margin: auto
+    color: #939393
+
+  .recharts-brush
+    .recharts-brush-texts
+      display: none
+
+    .recharts-brush-traveller
+      rect
+        fill: #d88acc!important
+
+      line
+        display: none
+
+    rect
+      stroke-width: 0
+      fill: white
+
+    rect.recharts-brush-slide
+      fill: $body-color
+      fill-opacity: 1
+
+  .recharts-cartesian-axis.recharts-xAxis line,
+  .recharts-tooltip-cursor
+    stroke: $border-color!important
+
+  .recharts-default-legend .recharts-legend-item-text
+    color: #939393!important
+    font-size: $font-size!important
+
+  .recharts-text.recharts-cartesian-axis-tick-value
+    fill: #939393!important
+    font-size: $font-size!important
+
+  .linechart-tooltip-wrapper
+    flex-direction: column
+
+    > span
+      padding: .3rem 1rem
+      font-size: $font-size
+      color: white
+      background: #d88acc
+      border-radius: 2px
+      text-align: center
+
+    .items
+      margin-top: .5rem
+      padding: .7rem 1.2rem
+      border-radius: 2px
+      background: $body-color
+      font-size: $font-size
+
+      .visits
+        color: #d88acc
+
+      .clicks
+        color: #56c167 

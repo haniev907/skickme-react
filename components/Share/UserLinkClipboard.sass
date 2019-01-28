@@ -1,0 +1,31 @@
+.user-link-clipboard-wrapper
+  border-radius: 2px
+  background: #f9f9f9
+  justify-content: center
+  align-items: center
+
+  .clipboard
+    padding: 1rem 2rem 1rem 2rem
+    color: #d88acc
+    cursor: pointer
+
+  .text
+    padding: 1rem 2rem 1rem 2rem
+    border: none
+    background: none
+    border-radius: 0
+    font-size: 1.4rem
+    outline: none
+
+@media only screen and (max-width: 450px)
+  .user-link-clipboard-wrapper
+    flex-direction: column
+    width: 100%
+
+    .text
+      border-bottom: .6rem solid white
+      width: 100%
+
+    .clipboard
+      width: 100%
+      text-align: center

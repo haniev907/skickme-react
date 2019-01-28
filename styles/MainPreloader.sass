@@ -1,0 +1,34 @@
+.main-preloader
+  top: 0
+  left: 0
+  bottom: 0
+  right: 0
+  position: fixed
+  background: #f9f9f9
+  z-index: 9999
+
+  &::before, &::after
+    content: ""
+    position: absolute
+    height: .4rem
+    border-radius: 2px
+    left: 50%
+    top: 50%
+    margin-left: -14rem
+    margin-top: -0.15rem
+
+  &::after
+    width: 0
+    background: #d88acc
+    animation: preloader 15s cubic-bezier(.17, .67, .81, .46) infinite
+
+  &::before
+    background: #e8e8e8
+    width: 28rem
+
+@keyframes preloader
+  0%
+    width: 1rem
+    
+  100%
+    width: 28rem
